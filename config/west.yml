@@ -8,15 +8,20 @@ manifest:
       url-base: https://github.com/petejohanson/
     - name: caksoylar
       url-base: https://github.com/caksoylar
-    - name: geeksville
-      url-base: https://github.com/geeksville
+    #- name: geeksville
+    #  url-base: https://github.com/geeksville
+    - name: kalbasit
+      url-base: https://github.com/kalbasit
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
     - name: cirque-input-module
-      remote: geeksville
-      revision: toucan
+      # remote: geeksville
+      # revision: toucan
+      # fix lock-up issue on right when touchpad is used
+      remote: kalbasit
+      revision: 00a4a28604ff60d30492184262ed9fdf81def7a9
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: v0.3
